@@ -9,11 +9,9 @@ Verified bit-exact against an independent Python Golden Model — **100% match, 
 ---
 
 ## Authors
-
 Lê Tiến Thành · Huỳnh Thiên Vũ · Hoàng Minh Nhật · Trịnh Trần Minh Quân
-Advisor: Th.S. Phạm Thế Vinh
-Khoa Vi mạch Bán dẫn – Ô tô, Phân hiệu Trường Đại học FPT tại TP.HCM, Việt Nam
-
+Advisor: M.S. Phạm Thế Vinh
+Faculty of Semiconductor and Automotive Microchips, FPT University Ho Chi Minh City Campus, Vietnam
 ---
 
 ## Scope
