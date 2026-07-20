@@ -14,7 +14,7 @@ module tb_top_module();
     initial begin clk = 0; forever #5 clk = ~clk; end
 
     initial begin
-        // NHỚ SỬA ĐƯỜNG DẪN NÀY
+       
       $readmemh("D:/CNN FINAL/so.hex", image_mem);
 
         rst_n = 0; test_valid_in = 0; test_pixel = 8'd0;
