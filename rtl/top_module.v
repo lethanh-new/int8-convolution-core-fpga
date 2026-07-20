@@ -25,7 +25,7 @@ module top_module (
     // 2. LẮP RÁP CÁC MODULE 
     // =========================================================================
 
-    // Khối 1: Cửa sổ quét ảnh (Người số 2)
+    // Khối 1: Cửa sổ quét ảnh 
     sliding_window #(.DATA_WIDTH(8), .IMG_WIDTH(28)) u_sliding_window (
         .clk(clk), .rst_n(rst_n), 
         .in_valid(valid_in), .pixel_in(pixel_in),
@@ -35,7 +35,7 @@ module top_module (
         .p20(px20), .p21(px21), .p22(px22)
     );
 
-    // Khối 2: ROM Trọng số (Bắt buộc phải gọi lại để cấp trọng số)
+    // Khối 2: ROM Trọng số 
     kernel_rom u_kernel_rom (
         .kernel_sel(2'd0), 
         .w00(w00), .w01(w01), .w02(w02), 
@@ -43,7 +43,7 @@ module top_module (
         .w20(w20), .w21(w21), .w22(w22)
     );
 
-    // Khối 3: Lõi Nhân chập MAC + ReLU + Clip (Người số 3)
+    // Khối 3: Lõi Nhân chập MAC + ReLU + Clip 
     conv_core_int8 u_conv_core (
         .clk(clk),
         .rst_n(rst_n),
@@ -62,11 +62,11 @@ module top_module (
         // Cấp bias = 0 theo tài liệu README
         .bias(32'd0),
         
-        // Hứng kết quả ngõ ra (Đã đổi tên cổng cho chuẩn)
+        // Hứng kết quả ngõ ra 
         .out_valid(w_conv_valid_out),
         .out_int32(w_out_int32),    
         .out_int8(w_out_int8)
-        // Cổng .sum_before_relu() là để soi sóng debug, cậu để trống cũng không sao
+       
     );
     
     // =========================================================================
